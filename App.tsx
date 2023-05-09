@@ -4,7 +4,9 @@ import { navigationRef } from '@services/navigation/root';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+
 import { persistor, store } from './src/store';
+import './src/translations/i18n';
 
 export default function App() {
   return (

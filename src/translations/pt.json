@@ -1,0 +1,45 @@
+{
+    "translation": {
+        "fields": {
+            "user": "Usuário",
+            "userPlaceholder": "Digite aqui seu usuário",
+            "password": "Senha",
+            "passwordPlaceholder": "Digite aqui sua senha",
+            "fullName": "Nome",
+            "fullNamePlaceholder": "Digite aqui seu nome",
+            "mail": "E-mail",
+            "mailPlaceholder": "Digite aqui seu e-mail",
+            "confirmPassword": "Confirme sua senha",
+            "confirmPasswordPlaceholder": "Confirme sua senha",
+            "sessionName": "Nome",
+            "sessionNamePlaceholder": "Escolha um nome para a sua sessão...",
+            "sessionDescription": "Descrição",
+            "sessionDescriptionPlaceholder": "Descreva sobre o que é a sua sessão...",
+            "frequency": "Frequência",
+            "title": "Título",
+            "titlePlaceholder": "Digite aqui o título da pergunta",
+            "content": "Conteúdo",
+            "contentPlaceholder": "Digite aqui o conteúdo da pergunta",
+            "secretContent": "Resposta",
+            "secretContentPlaceholder": "Digite aqui a resposta da pergunta",
+            "visibility": "Visibilidade"
+        },
+        "auth": {
+            "forgotPassword": "Esqueceu sua senha?",
+            "enter": "Entrar",
+            "register": "Registrar",
+            "recover": "Recuperar",
+            "createNow": "Crie uma agora!",
+            "withoutAccount": "Não tem uma conta?",
+            "alreadyRegisted": "Já tem uma conta?",
+            "toAuthentication": "Ir para Login",
+            "recoverPassword": "Recuperar Senha",
+            "recoverPasswordContent": "Um e-mail foi enviado com as instruções para a restauração da senha",
+            "userActivation": "Ativação de usuário",
+            "userActivationContent": "Acesse o link enviado via e-mail para confirmar o seu cadastro",
+            "actionInvalid": "Ação inválida",
+            "actionWarning": "Informação",
+            "ok": "Ok"
+        }
+    }
+}
