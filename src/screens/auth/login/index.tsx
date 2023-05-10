@@ -9,6 +9,7 @@ import { InfoText } from '@components/elements/texts/info';
 import { LinkedText } from '@components/elements/texts/linked';
 import { ButtonPrimary } from '@components/elements/buttons/primary';
 import { ErrorText } from '@components/elements/texts/error';
+import { GoogleAuthentication } from '@components/authentication/google';
 import { PasswordInput } from '@components/elements/inputs/passwords';
 import { Styles } from '@interfaces/elements/inputs/ValueProps';
 import { Styles as LinkedTextStyles } from '@interfaces/texts/LinkedTextProps';
@@ -18,6 +19,7 @@ import { initialValues, schema } from '@services/validation/signIn.schema';
 import { PATH_FORGOTPASSWORD, PATH_SIGNUP } from '@services/navigation';
 import { signInAction } from '@store/modules/auth/actions';
 import { navigateAction } from '@store/modules/navigate/actions';
+
 
 import { style } from './styles';
 
@@ -74,6 +76,9 @@ export function Login() {
                         </View>
                         <View style={[style.item, style.action]}>
                             <LinkedText value={t('auth.forgotPassword')} styled={LinkedTextStyles.DarkH3} action={forgotPasswordHandler} />
+                        </View>
+                        <View style={style.item}>
+                            <GoogleAuthentication />
                         </View>
                         <View style={style.item}>
                             <ButtonPrimary title={t('auth.enter')} action={handleSubmit} />
