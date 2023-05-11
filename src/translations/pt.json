@@ -1,5 +1,18 @@
 {
     "translation": {
+        "adventure": {
+            "newTitle": "Comece agora uma nova aventura",
+            "newSubtitle": "A cada aventura completada, um novo animal é resgatado",
+            "rescued": "Você já resgatou",
+            "animals": "animais",
+            "animalsRecued": "animais resgatados"
+        },
+        "actions": {
+            "start": "Iniciar"
+        },
+        "difficulty": {
+            "title": "Dificuldade"
+        },
         "fields": {
             "user": "Usuário",
             "userPlaceholder": "Digite aqui seu usuário",

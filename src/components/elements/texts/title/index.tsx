@@ -1,7 +1,7 @@
+import { Styles, TextProps } from '@interfaces/texts/TextProps';
 import React from 'react';
 import { Text } from 'react-native';
 
-import { Styles, TextProps } from '@interfaces/texts/TextProps';
 
 import { getStyle } from './styles';
 

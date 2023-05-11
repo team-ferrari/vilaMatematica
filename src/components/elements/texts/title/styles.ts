@@ -71,6 +71,13 @@ export const style = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
   },
+  lightH4Centered: {
+    fontFamily: theme.FONT_FAMILY,
+    fontSize: theme.FONT_SIZE_SMALL,
+    color: theme.LIGHT_COLOR,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
 });
 
 export const getStyle = (type:Styles) => {
@@ -81,6 +88,7 @@ export const getStyle = (type:Styles) => {
     if (type === Styles.DarkH3Centered) {return style.darkH3Centered;}
     if (type === Styles.DarkH3Enumerated) {return style.darkH3Enumerated;}
     if (type === Styles.DarkH4) {return style.darkH4;}
+    if (type === Styles.LightH4Centered) {return style.lightH4Centered;}
 
     return style.default;
 };

@@ -1,9 +1,8 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import React from 'react';
-
-import { PATH_LOGIN } from '@services/navigation';
 import { Login } from '@screens/auth/login';
+import { PATH_LOGIN } from '@services/navigation';
 import { AuthTheme } from '@themes/Auth';
+import React from 'react';
 
 import { styles } from '../styles.routes';
 
