@@ -8,6 +8,7 @@ module.exports = {
         alias: {
           '@assets': './src/assets',
           '@components': './src/components',
+          '@config': './src/config',
           '@constants': './src/constants',
           '@interfaces': './src/interfaces',
           '@helpers': './src/helpers',

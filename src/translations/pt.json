@@ -8,10 +8,32 @@
             "animalsRecued": "animais resgatados"
         },
         "actions": {
-            "start": "Iniciar"
+            "start": "Iniciar",
+            "exit": "Sair"
+        },
+        "activities": {
+            "questionNumber": "Pergunta",
+            "questionOf": "de",
+            "correctAnswer": {
+                "title": "Selecione a resposta correta",
+                "howMuchIs": "Quanto é:"
+            },
+            "imageCounter": {
+                "howMuch": "Quantos",
+                "above": "tem abaixo?"
+            },
+            "fingers": {
+                "title": "Quantos dedos há abaixo?"
+            },
+            "animals": {
+                "dog": "cachorros"
+            }
         },
         "difficulty": {
-            "title": "Dificuldade"
+            "title": "Dificuldade",
+            "easy": "Fácil",
+            "medium": "Médio",
+            "hard": "Difícil"
         },
         "fields": {
             "user": "Usuário",

@@ -15,6 +15,7 @@
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@constants/*": ["./src/constants/*"],
+      "@config/*": ["./src/config/*"],
       "@interfaces/*": ["./src/interfaces/*"],
       "@helpers/*": ["./src/helpers/*"],
       "@layouts/*": ["./src/layouts/*"],

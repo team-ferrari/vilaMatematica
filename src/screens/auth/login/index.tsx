@@ -1,24 +1,24 @@
-import React from 'react';
-import { View } from 'react-native';
-import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
-import { Formik } from 'formik';
 
+import { GoogleAuthentication } from '@components/authentication/google';
+import { ButtonPrimary } from '@components/elements/buttons/primary';
+import { PasswordInput } from '@components/elements/inputs/passwords';
 import { ValueInput } from '@components/elements/inputs/values';
+import { ErrorText } from '@components/elements/texts/error';
 import { InfoText } from '@components/elements/texts/info';
 import { LinkedText } from '@components/elements/texts/linked';
-import { ButtonPrimary } from '@components/elements/buttons/primary';
-import { ErrorText } from '@components/elements/texts/error';
-import { GoogleAuthentication } from '@components/authentication/google';
-import { PasswordInput } from '@components/elements/inputs/passwords';
-import { Styles } from '@interfaces/elements/inputs/ValueProps';
-import { Styles as LinkedTextStyles } from '@interfaces/texts/LinkedTextProps';
-import { RouteOptions } from '@interfaces/routes/RoutesOptions';
 import { SignInProps } from '@interfaces/account/SignInProps';
-import { initialValues, schema } from '@services/validation/signIn.schema';
+import { Styles } from '@interfaces/elements/inputs/ValueProps';
+import { RouteOptions } from '@interfaces/routes/RoutesOptions';
+import { Styles as LinkedTextStyles } from '@interfaces/texts/LinkedTextProps';
 import { PATH_FORGOTPASSWORD, PATH_SIGNUP } from '@services/navigation';
+import { initialValues, schema } from '@services/validation/signIn.schema';
 import { signInAction } from '@store/modules/auth/actions';
 import { navigateAction } from '@store/modules/navigate/actions';
+import { Formik } from 'formik';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { View } from 'react-native';
+import { useDispatch } from 'react-redux';
 
 
 import { style } from './styles';

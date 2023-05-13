@@ -1,8 +1,8 @@
+import { PictureProps } from '@interfaces/components/pictures/PictureProps';
 import React from 'react';
 import { Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-import { PictureProps } from '@interfaces/components/pictures/PictureProps';
 
 import { style } from './styles';
 

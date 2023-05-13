@@ -24,8 +24,16 @@ export const style = StyleSheet.create({
     color: theme.PRIMARY_COLOR,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
+  },
+  darkHighH1Centered: {
+    fontFamily: theme.FONT_FAMILY,
+    fontSize: theme.FONT_SIZE_HUGE,
+    color: theme.PRIMARY_COLOR,
+    fontWeight: 'bold',
+    textAlign: 'center',
+
   },
   darkH2Centered: {
     fontFamily: theme.FONT_FAMILY,
@@ -33,8 +41,6 @@ export const style = StyleSheet.create({
     color: theme.PRIMARY_COLOR,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 10,
   },
   darkH3: {
     fontFamily: theme.FONT_FAMILY,
@@ -68,12 +74,23 @@ export const style = StyleSheet.create({
     fontFamily: theme.FONT_FAMILY,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.PRIMARY_COLOR,
-    paddingTop: 10,
-    paddingBottom: 10,
+  },
+  darkH4Right: {
+    fontFamily: theme.FONT_FAMILY,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.PRIMARY_COLOR,
+    textAlign: 'right',
   },
   lightH4Centered: {
     fontFamily: theme.FONT_FAMILY,
     fontSize: theme.FONT_SIZE_SMALL,
+    color: theme.LIGHT_COLOR,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  lightHighH1Centered: {
+    fontFamily: theme.FONT_FAMILY,
+    fontSize: theme.FONT_SIZE_HUGE,
     color: theme.LIGHT_COLOR,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -88,7 +105,10 @@ export const getStyle = (type:Styles) => {
     if (type === Styles.DarkH3Centered) {return style.darkH3Centered;}
     if (type === Styles.DarkH3Enumerated) {return style.darkH3Enumerated;}
     if (type === Styles.DarkH4) {return style.darkH4;}
+    if (type === Styles.DarkH4Right) {return style.darkH4Right;}
     if (type === Styles.LightH4Centered) {return style.lightH4Centered;}
+    if (type === Styles.DarkHighH1Centered) {return style.darkHighH1Centered;}
+    if (type === Styles.LightHighH1Centered) {return style.lightHighH1Centered;}
 
     return style.default;
 };

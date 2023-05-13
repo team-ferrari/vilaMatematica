@@ -2,6 +2,7 @@ export const theme = {
     BAR_STYLE: 'dark-content',
     BAR_BACKGROUND_COLOR: 'transparent',
     INITIAL_BORDER: 24,
+    FONT_SIZE_HUGE: 72,
     FONT_SIZE_VENTI: 28,
     FONT_SIZE_LARGE: 24,
     FONT_SIZE_MEDIUM: 20,
