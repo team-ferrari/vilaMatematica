@@ -11,7 +11,7 @@ export const style = StyleSheet.create({
         minWidth: 350,
         backgroundColor: 'white',
         borderRadius: 10,
-        paddingVertical: 10,
+        paddingVertical: 20,
     },
     action: {
         padding: 20,

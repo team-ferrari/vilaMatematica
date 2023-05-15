@@ -27,7 +27,7 @@ export function CorrectAnswer({ session }:any) {
   return (
     <View style={style.container}>
       <View style={style.header}>
-        <TitleText value={t('activities.correctAnswer.title')} styled={Styles.DarkH1Centered} />
+        <TitleText value={t('activities.correctAnswer.title')} styled={Styles.DarkH2Centered} />
       </View>
       <View style={style.body}>
         <TitleText value={t('activities.correctAnswer.howMuchIs')} styled={Styles.DarkH1Centered} />

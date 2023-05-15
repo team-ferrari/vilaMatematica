@@ -1,4 +1,3 @@
-import { theme } from '@styles/index.style';
 import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
@@ -11,7 +10,6 @@ export const style = StyleSheet.create({
     },
     box: {
         borderRadius: 10,
-        backgroundColor: theme.PALLETE03_COLOR,
         paddingVertical: 10,
     },
 });

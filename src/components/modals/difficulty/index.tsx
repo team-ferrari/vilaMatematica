@@ -1,6 +1,7 @@
 
-import { ButtonPrimary } from '@components/elements/buttons/primary';
+import { ButtonAction } from '@components/elements/buttons/action';
 import { TitleText } from '@components/elements/texts/title';
+import { getColorPallete } from '@helpers/DifficultyHelper';
 import { Styles } from '@interfaces/texts/TextProps';
 import { RootState } from '@store/modules/rootReducer';
 import { createAction } from '@store/modules/session/actions';
@@ -36,7 +37,7 @@ export function DifficultyModal({ modal, dismissAction }:any) {
                 <View style={style.action}>
                     {options.map((d, i) => (
                         <TouchableOpacity style={style.button} key={i} onPress={() => { selectOptionHandler(d); }}>
-                            <ButtonPrimary title={getName(d)} />
+                            <ButtonAction title={getName(d)} pallete={getColorPallete(d)} />
                         </TouchableOpacity>
                     ))}
                 </View>

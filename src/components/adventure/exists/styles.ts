@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 export const style = StyleSheet.create({
     container: {
         paddingHorizontal: 20,
+        display: 'flex',
     },
     body: {
         paddingVertical: 60,
@@ -14,6 +15,6 @@ export const style = StyleSheet.create({
         paddingVertical: 20,
     },
     animations: {
-        height: 150,
+        width: 25,
     },
 });

@@ -1,4 +1,5 @@
 import { TitleText } from '@components/elements/texts/title';
+import { getColorByIndex } from '@helpers/ColorHelper';
 import { Styles } from '@interfaces/texts/TextProps';
 import React from 'react';
 import { FlatList, View} from 'react-native';
@@ -15,9 +16,9 @@ export function OptionsList({ details, action }:any) {
       data={availableOptions}
       keyExtractor={(item) => item.toString()}
       numColumns={2}
-      renderItem={({item}) => (
+      renderItem={({ item, index }) => (
         <View style={style.action}>
-          <TouchableHighlight style={style.box} onPress={() => { action(item); }}>
+          <TouchableHighlight style={[ style.box, { backgroundColor: getColorByIndex(index) } ]} onPress={() => { action(item); }}>
             <TitleText value={item} styled={Styles.LightHighH1Centered} />
           </TouchableHighlight>
         </View>

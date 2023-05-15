@@ -1,17 +1,31 @@
-import cat from '@assets/images/cat.png';
+import { getAnimalByName } from '@helpers/AnimationHelper';
+import LottieView from 'lottie-react-native';
 import React from 'react';
-import { Image, View} from 'react-native';
+import { FlatList, View} from 'react-native';
 
 import {style} from './styles';
 
 export function AnimalImages({ details }:any) {
-  const { correctOption } = details;
+  const { correctOption, animal } = details;
+  const data = Array.from({ length: correctOption });
+  const animation = getAnimalByName(animal);
 
   return (
     <View style={style.container}>
-      { Array.from({ length: correctOption }, (_, i) => (
-          <Image source={cat} style={style.image} key={i} />
-      ))}
+      <FlatList
+        data={data}
+        keyExtractor={(_, index) => index.toString()}
+        numColumns={2}
+        renderItem={({ index }) => (
+          <LottieView
+            key={index}
+            source={animation}
+            style={style.animations}
+            autoPlay
+            loop
+          />
+        )}
+      />
     </View>
   );
 }

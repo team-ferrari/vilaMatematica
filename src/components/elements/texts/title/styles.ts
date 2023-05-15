@@ -19,10 +19,9 @@ export const style = StyleSheet.create({
     paddingBottom: 10,
   },
   darkH1Centered: {
-    fontFamily: theme.FONT_FAMILY,
+    fontFamily: theme.FONT_FAMILY_BOLD,
     fontSize: theme.FONT_SIZE_LARGE,
     color: theme.PRIMARY_COLOR,
-    fontWeight: 'bold',
     textAlign: 'center',
     paddingTop: 5,
     paddingBottom: 5,
@@ -36,10 +35,9 @@ export const style = StyleSheet.create({
 
   },
   darkH2Centered: {
-    fontFamily: theme.FONT_FAMILY,
+    fontFamily: theme.FONT_FAMILY_BOLD,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.PRIMARY_COLOR,
-    fontWeight: 'bold',
     textAlign: 'center',
   },
   darkH3: {
@@ -77,7 +75,7 @@ export const style = StyleSheet.create({
   },
   darkH4Right: {
     fontFamily: theme.FONT_FAMILY,
-    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontSize: theme.FONT_SIZE_SMALL,
     color: theme.PRIMARY_COLOR,
     textAlign: 'right',
   },
@@ -101,6 +99,12 @@ export const style = StyleSheet.create({
     color: theme.LIGHT_COLOR,
     textAlign: 'center',
   },
+  lightH3Centered: {
+    fontFamily: theme.FONT_FAMILY_BOLD,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.LIGHT_COLOR,
+    textAlign: 'center',
+  },
 });
 
 export const getStyle = (type:Styles) => {
@@ -116,6 +120,7 @@ export const getStyle = (type:Styles) => {
     if (type === Styles.DarkHighH1Centered) {return style.darkHighH1Centered;}
     if (type === Styles.LightHighH1Centered) {return style.lightHighH1Centered;}
     if (type === Styles.LightH2Centered) {return style.lightH2Centered;}
+    if (type === Styles.LightH3Centered) {return style.lightH3Centered;}
 
     return style.default;
 };

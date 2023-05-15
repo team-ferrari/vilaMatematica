@@ -3,17 +3,17 @@ import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
     container: {
-        paddingHorizontal: 10,
+        paddingHorizontal: 0,
     },
     header: {
-        paddingVertical: 30,
+        paddingVertical: 0,
     },
     body: {
-        paddingVertical: 10,
+        paddingHorizontal: 20,
     },
     images: {
         flexDirection: 'row',
-        paddingVertical: 10,
+        paddingVertical: 0,
     },
     image: {
         flex: 1,
