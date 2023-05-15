@@ -1,15 +1,18 @@
 import { TitleText } from '@components/elements/texts/title';
 import { getOperator } from '@helpers/OperatorHelper';
 import { Styles } from '@interfaces/texts/TextProps';
+import { selectOptionAction } from '@store/modules/session/actions';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
+import { useDispatch } from 'react-redux';
 
 import { OptionsList } from '../optionsList';
 
 import {style} from './styles';
 
 export function CorrectAnswer({ session }:any) {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
   const { details } = session;
 
@@ -17,8 +20,8 @@ export function CorrectAnswer({ session }:any) {
 
   const question = `${details?.firstValue} ${getOperator(details?.operation)} ${details?.secondValue}`;
 
-  function selectedOption(data:any) {
-    console.log(data);
+  function selectedOption(option:any) {
+    dispatch(selectOptionAction({ option }));
   }
 
   return (

@@ -12,7 +12,7 @@ const { Navigator, Screen } = createDrawerNavigator();
 
 export function Routes() {
     return (
-        <Navigator initialRouteName={RouteOptions.activities} screenOptions={styles.drawerScreenOptions}>
+        <Navigator initialRouteName={RouteOptions.main} screenOptions={styles.drawerScreenOptions}>
             <Screen name={RouteOptions.main} component={MainScreens} options={styles.screenOptions} />
             <Screen name={RouteOptions.auth} component={AuthScreens} options={styles.screenOptions} />
             <Screen name={RouteOptions.activities} component={ActivityScreens} options={styles.screenOptions} />

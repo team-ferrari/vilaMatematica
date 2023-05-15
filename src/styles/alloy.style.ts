@@ -7,7 +7,7 @@ export const theme = {
     FONT_SIZE_LARGE: 24,
     FONT_SIZE_MEDIUM: 20,
     FONT_SIZE_SMALL: 14,
-    FONT_FAMILY: 'LeagueSpartan-Regular',
+    FONT_FAMILY: 'Raleway-ExtraBold',
     BACKGROUND_COLOR: '#e5ddc8',
     PRIMARY_COLOR: '#4a4a4a',
     BORDER_COLOR: '#dfe0e2',

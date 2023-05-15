@@ -16,3 +16,26 @@ export function createActionSuccess({ session }:any) {
     };
 }
 
+export function selectOptionAction({ option }:any) {
+    return {
+        type: '@session/SELECT_OPTION',
+        payload: {
+            option,
+        },
+    };
+}
+
+export function selectSuccessAction({ isCorrect }:any) {
+    return {
+        type: '@session/SELECT_SUCCESS',
+        payload: {
+            isCorrect,
+        },
+    };
+}
+
+export function nextAction() {
+    return {
+        type: '@session/NEXT',
+    };
+}

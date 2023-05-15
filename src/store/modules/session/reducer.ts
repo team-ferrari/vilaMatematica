@@ -5,6 +5,8 @@ const INITIAL_STATE = {
     session: null,
     activeIndex: 0,
     difficulty: '',
+    validated: false,
+    isCorrect: false,
     types: [
         { type: SESSIONTYPE_IMAGECOUNT, possibility: 0.2 },
         { type: SESSIONTYPE_CORRECTANSWER, possibility: 0.6 },
@@ -22,6 +24,17 @@ export default function session(state = INITIAL_STATE, action:any) {
             }
             case '@session/CREATE_SUCCESS': {
                 draft.session = action.payload.session;
+                break;
+            }
+            case '@session/SELECT_SUCCESS': {
+                draft.validated = true;
+                draft.isCorrect = action.payload.isCorrect;
+                break;
+            }
+            case '@session/NEXT': {
+                draft.validated = false;
+                draft.isCorrect = false;
+                draft.activeIndex = draft.activeIndex + 1;
                 break;
             }
             default:

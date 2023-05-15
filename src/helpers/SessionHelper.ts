@@ -30,8 +30,20 @@ function getConfig(difficulty:string) {
     return typesByDifficulty.find(t => t.difficulty === difficulty);
 }
 
+function isCorrectAnswer(session:any, index:number, option:string) {
+    if (!session || session.length < index) {return false;}
+
+    const activeOption = session[index];
+    const { correctOption } = activeOption?.details;
+
+    if (!correctOption || correctOption !== option) {return false;}
+
+    return true;
+}
+
 export {
     generateNewSession,
     createSession,
     getConfig,
+    isCorrectAnswer,
 };
