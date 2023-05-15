@@ -10,8 +10,7 @@ export const style = StyleSheet.create({
   },
   light: {
     fontFamily: theme.FONT_FAMILY,
-    fontSize: theme.FONT_SIZE_SMALL,
+    fontSize: theme.FONT_SIZE_LARGE,
     color: theme.LIGHT_COLOR,
-    fontWeight: 'bold',
   },
 });

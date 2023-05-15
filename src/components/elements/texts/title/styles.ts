@@ -95,6 +95,12 @@ export const style = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  lightH2Centered: {
+    fontFamily: theme.FONT_FAMILY_BOLD,
+    fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.LIGHT_COLOR,
+    textAlign: 'center',
+  },
 });
 
 export const getStyle = (type:Styles) => {
@@ -109,6 +115,7 @@ export const getStyle = (type:Styles) => {
     if (type === Styles.LightH4Centered) {return style.lightH4Centered;}
     if (type === Styles.DarkHighH1Centered) {return style.darkHighH1Centered;}
     if (type === Styles.LightHighH1Centered) {return style.lightHighH1Centered;}
+    if (type === Styles.LightH2Centered) {return style.lightH2Centered;}
 
     return style.default;
 };

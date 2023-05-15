@@ -13,6 +13,7 @@ export enum Styles {
     DarkH3Centered,
     DarkH3Enumerated,
     LightHighH1Centered,
+    LightH2Centered,
     LightH4Centered,
     DarkH4,
     DarkH4Right,
