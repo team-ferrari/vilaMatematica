@@ -38,7 +38,9 @@
                 "tiger": "tigres",
                 "toucan": "tucanos",
                 "whale": "baleias"
-            }
+            },
+            "congratsCorrect": "Você acertou! Parabéns!",
+            "wrongAnswer": "Que pena, você errou essa pergunta."
         },
         "difficulty": {
             "title": "Dificuldade",

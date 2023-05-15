@@ -28,7 +28,7 @@ function* selectOption({ payload }:any) {
 function* selectSuccess() {
     yield new Promise(resolve => setTimeout(() => {
         resolve(true);
-    }, 1000));
+    }, 3000));
     yield put(nextAction());
 }
 

@@ -1,6 +1,7 @@
 import { CorrectAnswer } from '@components/activities/correctAnswer';
 import { Fingers } from '@components/activities/fingers';
 import { ImageCounter } from '@components/activities/imageCounter';
+import { ValidationActivies } from '@components/activities/validation';
 import { ButtonSecondary } from '@components/elements/buttons/secondary';
 import { TitleText } from '@components/elements/texts/title';
 import { SESSIONTYPE_CORRECTANSWER, SESSIONTYPE_FINGERS, SESSIONTYPE_IMAGECOUNT } from '@constants/sessionTypes';
@@ -15,7 +16,7 @@ import { style } from './styles';
 
 export function ActivityScreen() {
     const { t } = useTranslation();
-    const { session, activeIndex }:any = useSelector((state:RootState) => state.session);
+    const { session, activeIndex, validated, isCorrect }:any = useSelector((state:RootState) => state.session);
 
     if (!session) {return;}
 
@@ -46,7 +47,7 @@ export function ActivityScreen() {
                 <TitleText value={questionPosition} styled={Styles.DarkH4Right} />
             </View>
             <View style={style.body}>
-                { generateActivity() }
+                { validated ? <ValidationActivies isCorrect={isCorrect} /> : generateActivity() }
             </View>
         </View>
     );
