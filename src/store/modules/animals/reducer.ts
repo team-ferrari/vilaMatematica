@@ -16,6 +16,7 @@ const INITIAL_STATE = {
         toucan: false,
         whale: false,
     },
+    released: 0,
 };
 
 export default function sessions(state = INITIAL_STATE, action:any) {
@@ -26,6 +27,7 @@ export default function sessions(state = INITIAL_STATE, action:any) {
                 animals[action.payload.animal] = true;
                 draft.animals = animals;
                 draft.lastUnlocked = action.payload.animal;
+                draft.released = (draft.released || 0) + 1;
                 break;
             }
             default:

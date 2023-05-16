@@ -26,6 +26,7 @@
                 "title": "Resolva a equação abaixo"
             },
             "animals": {
+                "lock": "Bloqueado",
                 "cat": "gatos",
                 "cow": "vacas",
                 "dog": "cachorros",

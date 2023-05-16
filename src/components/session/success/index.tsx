@@ -1,4 +1,3 @@
-import SadFace from '@assets/animations/sad-face.json';
 import { ButtonPrimary } from '@components/elements/buttons/primary';
 import { TitleText } from '@components/elements/texts/title';
 import { getAnimalByName } from '@helpers/AnimationHelper';

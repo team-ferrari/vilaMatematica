@@ -1,6 +1,6 @@
+import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
 import React from 'react';
 import { View } from 'react-native';
-import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
 
 export function GoogleAuthentication() {
     GoogleSignin.configure({

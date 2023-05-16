@@ -1,7 +1,8 @@
 import SideMenuNavigation from '@components/navigation/sidemenu';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { Animals } from '@screens/animals';
 import { Home } from '@screens/home';
-import { PATH_HOME } from '@services/navigation';
+import { PATH_ANIMALS, PATH_HOME } from '@services/navigation';
 import { MainTheme } from '@themes/Main';
 import React from 'react';
 
@@ -17,10 +18,11 @@ export function MainScreens() {
     return (
         <MainTheme>
             <Navigator
-                initialRouteName={PATH_HOME}
+                initialRouteName={PATH_ANIMALS}
                 screenOptions={styles.drawerScreenOptions}
                 drawerContent={props => getSideMenu(props)}>
                 <Screen name={PATH_HOME} component={Home} />
+                <Screen name={PATH_ANIMALS} component={Animals} />
             </Navigator>
         </MainTheme>
     );
