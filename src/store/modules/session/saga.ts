@@ -1,7 +1,7 @@
 import { generateNewSession, isCorrectAnswer } from '@helpers/SessionHelper';
 import { RouteOptions } from '@interfaces/routes/RoutesOptions';
-import { PATH_ACTIVITY } from '@services/navigation';
-import { navigate } from '@services/navigation/root';
+import { PATH_ACTIVITY, PATH_HOME } from '@services/navigation';
+import { navigate, navigationRef } from '@services/navigation/root';
 import { all, put, select, takeLatest } from 'redux-saga/effects';
 
 import { createActionSuccess, nextAction, selectSuccessAction } from './actions';
@@ -36,10 +36,15 @@ function* nextOption() {
     console.log('TODO: Check if finished');
 }
 
+function* abort() {
+    navigate(RouteOptions.main, { screen: PATH_HOME });
+}
+
 export default all([
     takeLatest('@session/CREATE', create),
     takeLatest('@session/CREATE_SUCCESS', createSuccess),
     takeLatest('@session/SELECT_OPTION', selectOption),
     takeLatest('@session/SELECT_SUCCESS', selectSuccess),
     takeLatest('@session/NEXT', nextOption),
+    takeLatest('@session/ABORT', abort),
 ]);

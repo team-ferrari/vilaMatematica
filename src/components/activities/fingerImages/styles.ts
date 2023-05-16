@@ -8,5 +8,7 @@ export const style = StyleSheet.create({
     image: {
         flex: 1,
         aspectRatio: 1,
+        height: 50,
+        resizeMode: 'contain',
     },
 });

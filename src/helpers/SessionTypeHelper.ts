@@ -38,7 +38,7 @@ function getTypeOptions(type:string, configs:any) {
 
     if (type === SESSIONTYPE_IMAGECOUNT) {
         const operation = getRandomFromArray(configs.operations);
-        const correctOption = getRandomValue(5);
+        const correctOption = getRandomValue(4);
         const options = generateNextPositions(correctOption, 1);
         const animal = getRandomFromArray(configs.animals);
 

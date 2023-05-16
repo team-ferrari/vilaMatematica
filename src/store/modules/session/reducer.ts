@@ -12,6 +12,7 @@ const INITIAL_STATE = {
         { type: SESSIONTYPE_CORRECTANSWER, possibility: 0.6 },
         { type: SESSIONTYPE_FINGERS, possibility: 0.2 },
     ],
+    answers: [],
 };
 
 export default function session(state = INITIAL_STATE, action:any) {
@@ -20,6 +21,7 @@ export default function session(state = INITIAL_STATE, action:any) {
             case '@session/CREATE': {
                 draft.difficulty = action.payload.difficulty;
                 draft.activeIndex = 0;
+                draft.answers = [];
                 break;
             }
             case '@session/CREATE_SUCCESS': {
@@ -35,6 +37,13 @@ export default function session(state = INITIAL_STATE, action:any) {
                 draft.validated = false;
                 draft.isCorrect = false;
                 draft.activeIndex = draft.activeIndex + 1;
+                break;
+            }
+            case '@session/ABORT': {
+                draft.validated = false;
+                draft.isCorrect = false;
+                draft.session = null;
+                draft.answers = [];
                 break;
             }
             default:

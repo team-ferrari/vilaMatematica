@@ -39,3 +39,9 @@ export function nextAction() {
         type: '@session/NEXT',
     };
 }
+
+export function abortAction() {
+    return {
+        type: '@session/ABORT',
+    };
+}

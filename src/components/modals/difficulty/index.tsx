@@ -27,6 +27,7 @@ export function DifficultyModal({ modal, dismissAction }:any) {
 
     function selectOptionHandler(difficulty:string) {
         dispatch(createAction({ difficulty }));
+        dismissAction();
     }
 
     return (
