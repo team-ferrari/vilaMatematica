@@ -1,7 +1,8 @@
 import SideMenuNavigation from '@components/navigation/sidemenu';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { ActivityScreen } from '@screens/activity';
-import { PATH_ACTIVITY } from '@services/navigation';
+import { ActivityFinishedScreen } from '@screens/activityFinished';
+import { PATH_ACTIVITY, PATH_ACTIVITY_FINISHED } from '@services/navigation';
 import { ActionTheme } from '@themes/Action';
 import React from 'react';
 
@@ -17,10 +18,11 @@ export function ActivityScreens() {
     return (
         <ActionTheme>
             <Navigator
-                initialRouteName={PATH_ACTIVITY}
+                initialRouteName={PATH_ACTIVITY_FINISHED}
                 screenOptions={styles.drawerScreenOptions}
                 drawerContent={props => getSideMenu(props)}>
                 <Screen name={PATH_ACTIVITY} component={ActivityScreen} />
+                <Screen name={PATH_ACTIVITY_FINISHED} component={ActivityFinishedScreen} />
             </Navigator>
         </ActionTheme>
     );

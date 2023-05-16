@@ -12,7 +12,7 @@ const INITIAL_STATE = {
         { type: SESSIONTYPE_CORRECTANSWER, possibility: 0.6 },
         { type: SESSIONTYPE_FINGERS, possibility: 0.2 },
     ],
-    answers: [],
+    correctAnswer: 0,
 };
 
 export default function session(state = INITIAL_STATE, action:any) {
@@ -21,7 +21,7 @@ export default function session(state = INITIAL_STATE, action:any) {
             case '@session/CREATE': {
                 draft.difficulty = action.payload.difficulty;
                 draft.activeIndex = 0;
-                draft.answers = [];
+                draft.correctAnswer = 0;
                 break;
             }
             case '@session/CREATE_SUCCESS': {
@@ -31,6 +31,7 @@ export default function session(state = INITIAL_STATE, action:any) {
             case '@session/SELECT_SUCCESS': {
                 draft.validated = true;
                 draft.isCorrect = action.payload.isCorrect;
+                draft.correctAnswer = action.payload.isCorrect ? draft.correctAnswer + 1 : draft.correctAnswer;
                 break;
             }
             case '@session/NEXT': {
@@ -43,7 +44,7 @@ export default function session(state = INITIAL_STATE, action:any) {
                 draft.validated = false;
                 draft.isCorrect = false;
                 draft.session = null;
-                draft.answers = [];
+                draft.correctAnswer = 0;
                 break;
             }
             default:

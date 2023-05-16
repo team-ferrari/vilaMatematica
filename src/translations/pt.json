@@ -39,6 +39,20 @@
                 "toucan": "tucanos",
                 "whale": "baleias"
             },
+            "singleAnimals": {
+                "cat": "gato",
+                "cow": "vaca",
+                "dog": "cachorro",
+                "elephant": "elefante",
+                "panda": "panda",
+                "pig": "porco",
+                "pigeon": "pombo",
+                "rabbit": "coelho",
+                "sloth": "bicho-preguiça",
+                "tiger": "tigre",
+                "toucan": "tucano",
+                "whale": "baleia"
+            },
             "congratsCorrect": "Você acertou! Parabéns!",
             "wrongAnswer": "Que pena, você errou essa pergunta."
         },
@@ -88,6 +102,17 @@
             "actionInvalid": "Ação inválida",
             "actionWarning": "Informação",
             "ok": "Ok"
+        },
+        "session": {
+            "failed": {
+                "title": "Sua sessão foi finalizada.",
+                "message": "Você acertou X%. Infelizmente nenhum animal foi liberado.",
+                "tryAgain": "Tente novamente"
+            },
+            "success": {
+                "title": "Você conseguiu, Parabéns! Um {animal} foi liberado para a natureza",
+                "back": "Voltar para Home"
+            }
         }
     }
 }

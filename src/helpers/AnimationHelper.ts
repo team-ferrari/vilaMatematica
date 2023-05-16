@@ -31,6 +31,12 @@ function getAnimalByName(name: string) {
     return animalMap[name];
 }
 
+function getRandomAnimal() {
+    const animalKeys = Object.keys(animalMap);
+    return animalKeys[Math.floor(Math.random() * animalKeys.length)];
+}
+
 export {
     getAnimalByName,
+    getRandomAnimal,
 };

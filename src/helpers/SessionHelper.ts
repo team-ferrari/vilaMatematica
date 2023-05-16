@@ -41,9 +41,14 @@ function isCorrectAnswer(session:any, index:number, option:string) {
     return true;
 }
 
+function isSuccessedSession(total: number, correct: number) {
+    return (correct / total) > 0.7;
+}
+
 export {
     generateNewSession,
     createSession,
     getConfig,
     isCorrectAnswer,
+    isSuccessedSession,
 };
