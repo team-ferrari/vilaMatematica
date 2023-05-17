@@ -5,10 +5,14 @@ import { ValidationActivies } from '@components/activities/validation';
 import { ButtonSecondary } from '@components/elements/buttons/secondary';
 import { TitleText } from '@components/elements/texts/title';
 import { SESSIONTYPE_CORRECTANSWER, SESSIONTYPE_FINGERS, SESSIONTYPE_IMAGECOUNT } from '@constants/sessionTypes';
+import { backgroundSound, execute } from '@helpers/SoundHelper';
 import { Styles } from '@interfaces/texts/TextProps';
+import { useFocusEffect } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { navigationRef } from '@services/navigation/root';
 import { RootState } from '@store/modules/rootReducer';
 import { abortAction } from '@store/modules/session/actions';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,9 +20,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { style } from './styles';
 
 export function ActivityScreen() {
+    const [ sound, setSound ] = useState(null);
     const dispatch = useDispatch();
     const { t } = useTranslation();
+    const navigation = useNavigation();
     const { session, activeIndex, validated, isCorrect }:any = useSelector((state:RootState) => state.session);
+
+    useEffect(() => {
+        if (!sound) {
+            setSound(backgroundSound());
+        }
+        const unsubscribe = navigation.addListener('blur', () => {
+            if (sound) {
+                sound.stop();
+                sound.release();
+            }
+        });
+
+        return unsubscribe;
+    }, [navigation, sound]);
 
     if (!session) {return <></>;}
 

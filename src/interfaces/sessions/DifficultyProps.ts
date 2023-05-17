@@ -1,5 +1,5 @@
 export enum DifficultyProps {
-    EASY = 15,
+    EASY = 1,
     MEDIUM = 30,
     HARD = 50
 }
