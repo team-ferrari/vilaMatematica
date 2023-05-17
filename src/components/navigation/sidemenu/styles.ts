@@ -6,7 +6,7 @@ export const style = StyleSheet.create({
         flex: 1,
     },
     drawerContent: {
-        marginTop: -30,
+        marginTop: -10,
     },
     header: {
       display: 'flex',
@@ -14,7 +14,6 @@ export const style = StyleSheet.create({
       paddingVertical: 40,
       backgroundColor: theme.PALLETE03_COLOR,
       borderBottomRightRadius: 40,
-      borderBottomLeftRadius: 40,
     },
     items: {
       backgroundColor: theme.LIGHT_COLOR,
